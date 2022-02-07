@@ -41,15 +41,15 @@ export default function AddCamposFormularioContato(props) {
                 <form className="mt-5" onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="inputName" className="form-label">Nome</label>
-                        <input type="text" name="txtNome" className="form-control" id="inputName"  value={camposFormulario.nome} onChange={handleChange} aria-describedby="nameHelmp" />
+                        <input type="text" className="form-control" id="inputName"  value={camposFormulario.nome} onChange={handleChange} aria-describedby="nameHelmp" required />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="inputEmail1" className="form-label">Email</label>
-                        <input type="email" className="form-control"  id="inputEmail" value={camposFormulario.email} onChange={handleChange} aria-describedby="emailHelp" />
+                        <input type="email" className="form-control"  id="inputEmail" value={camposFormulario.email} onChange={handleChange} aria-describedby="emailHelp" required />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="InputMessage" className="form-label">Mensagem</label>
-                        <textarea type="textarea" className="form-control" id="InputMessage" value={camposFormulario.mensagem} onChange={handleChange}></textarea>
+                        <textarea type="textarea" className="form-control" id="InputMessage" value={camposFormulario.mensagem} onChange={handleChange} required></textarea>
                     </div>
 
                     <button type="submit" className="btn btn-primary" >Enviar</button>
