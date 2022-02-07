@@ -32,6 +32,10 @@ export default function AddCamposFormularioContato(props) {
         setCamposFormulario(campoLimpo);
         e.preventDefault();
     }
+
+    function resetHandleClick() {
+        setCamposFormulario(campoLimpo);
+    }
     return(
         <div className="container w-50" >
                 <form className="mt-5" onSubmit={handleSubmit}>
@@ -49,7 +53,7 @@ export default function AddCamposFormularioContato(props) {
                     </div>
 
                     <button type="submit" className="btn btn-primary" >Enviar</button>
-                    <button type="reset" className="btn btn-warning">Limpar</button>
+                    <button type="reset" className="btn btn-warning" onClick={resetHandleClick}>Limpar</button>
                 </form>
             </div>
 
